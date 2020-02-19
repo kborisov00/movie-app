@@ -16,6 +16,15 @@
     &__title {
         text-align: center;
     }
+
+    &__rating {
+        position: absolute;
+        top: 0;
+        left: 2%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: rgba(0,0,0,.8);
+    }
 }
 
 @media (max-width: 921px) {

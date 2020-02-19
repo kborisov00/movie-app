@@ -74,6 +74,7 @@ const MovieSlider = (props) => {
                 {results.map(movie => (
                     <div key={movie.id} className="movie">
                         <img className="movie__slide" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                        <p className="movie__rating"><i class="fas fa-star"></i> {movie.vote_average}</p>
                         <h3 className="movie__title">{movie.title}</h3>
                     </div>
                 ))}
