@@ -1,0 +1,104 @@
+// movie card parent
+.movie-card {
+  position: relative;
+  line-height: 0;
+
+  $borderRadius: 20px;
+
+  // before element used to darken the image
+  &::after {
+    content: "";
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background: #000;
+    border-radius: $borderRadius;
+
+    transition: 300ms ease;
+    opacity: 0;
+  }
+
+  // hover state
+  &:hover::after {
+    opacity: 0.5;
+  }
+
+  // reveal eye icon on hover state
+  &:hover &__view {
+    transform: translate(-50%, -50%) translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // movie poster
+  &__poster {
+    height: 300px;
+    width: 230px;
+    border-radius: $borderRadius;
+  }
+
+  // eye icon on hover
+  &__view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(20px);
+    z-index: 2;
+
+    font-size: 60px;
+    color: #fff;
+
+    transition: 300ms ease;
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  // rating label
+  &__rating {
+    $size: 30px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: $size;
+    width: $size;
+    margin: 0;
+    border-radius: 50%;
+    line-height: $size;
+
+    background-color: #1a191f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+// === Media queries === //
+@media (max-width: 1425px) {
+  .movie-card {
+    &__poster {
+      height: 250px;
+      width: 180px;
+    }
+  }
+}
+
+@media (max-width: 619px) {
+  .movie-card {
+    &__poster {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

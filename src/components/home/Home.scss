@@ -1,0 +1,52 @@
+.top-slider {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+
+  .slick {
+    &-dots {
+      transform: translateY(-35px);
+    }
+
+    &-active button::before,
+    &-dots button::before {
+        color: #ffd80e !important;
+    }
+
+  }
+
+  &__slide {
+    height: calc(100vh - 80px);
+    width: 100vw;
+  }
+
+  &__poster {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__info {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding: 30px;
+    width: 100vw;
+    line-height: 35px;
+
+    & > * {
+      margin: 0;
+    }
+  }
+}

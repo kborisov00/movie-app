@@ -1,0 +1,25 @@
+// Import 'Open Sans' font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+// html reset --start
+html, body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', 'sans-serif';
+    background-color: #1a191f;
+    color: #fff;
+}
+
+html, body, h1, ul {
+    padding: 0;
+    margin: 0;
+}
+// html reset --end
+
+// Global styles
+
+// container
+.container {
+    padding: 0 15%;
+    width: 100%;
+    box-sizing: border-box;
+}

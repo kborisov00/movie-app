@@ -1,0 +1,37 @@
+.slider {
+    max-height: 350px;
+    margin-bottom: 100px;
+}
+
+.movie {
+    position: relative;
+
+    &__slide {
+        width: 200px !important;
+        margin: 0 auto;
+        display: block;
+        border-radius: 20px;
+    }
+
+    &__title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 921px) {
+    .container {
+        padding: 0 10%;
+    }
+}
+
+@media (max-width: 663px) {
+    .container {
+        padding: 0;
+    }
+
+    .movie {
+        &__slide {
+            width: 140px !important;
+        }
+    }
+}
