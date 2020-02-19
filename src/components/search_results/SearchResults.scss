@@ -6,6 +6,31 @@
     padding: 20px;
 }
 
+.buttons {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+
+    button {
+        background-color: transparent;
+        border: none;
+        font-size: 32px;
+        padding: 20px 40px;
+        text-align: center;
+        color: #ffd80e;
+        cursor: pointer;
+        transition: 300ms ease;
+
+        &:hover {
+            color: #333;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
 // === Media queries === //
 @media (max-width: 1425px) {
     .movie-grid {
@@ -17,4 +42,9 @@
     .movie-grid {
         grid-template-columns: repeat(auto-fill, 100%);
       }
+
+    .buttons {
+        width: 100%;
+        justify-content: space-around;
+    }
 }

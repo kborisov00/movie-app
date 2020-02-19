@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import './MovieSlider.scss';
 
@@ -64,7 +65,12 @@ const MovieSlider = (props) => {
                     arrows: false,
                 }
             }
-        ]  
+        ]
+    }
+
+    const styles = {
+        color: '#fff',
+        textDecoration: 'none',
     }
 
     return (
@@ -73,9 +79,11 @@ const MovieSlider = (props) => {
             <Slider {...sliderSettings} className="slider">
                 {results.map(movie => (
                     <div key={movie.id} className="movie">
-                        <img className="movie__slide" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-                        <p className="movie__rating"><i class="fas fa-star"></i> {movie.vote_average}</p>
-                        <h3 className="movie__title">{movie.title}</h3>
+                        <Link to={`/movie/${movie.id}`} style={styles}>
+                            <img className="movie__slide" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                            <p className="movie__rating"><i class="fas fa-star"></i> {movie.vote_average}</p>
+                            <h3 className="movie__title">{movie.title}</h3>
+                        </Link>
                     </div>
                 ))}
             </Slider>
