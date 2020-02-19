@@ -5,7 +5,10 @@
 ### Application Stack
 
 * React  
+* React Router  
 * TMD API  
 * SASS  
+* Font Awesome API  
+* Slick.js
 
 ### [View Demo](https://www.google.com)
