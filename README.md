@@ -4,8 +4,8 @@
 
 ### Application Stack
 
-⋅⋅* React
-⋅⋅* TMD API
-⋅⋅* SASS
+⋅⋅* React 
+⋅⋅* TMD API 
+⋅⋅* SASS 
 
 ### [View Demo](https://www.google.com)
