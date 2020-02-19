@@ -11,4 +11,4 @@
 * Font Awesome API  
 * Slick.js
 
-### [View Demo](https://www.google.com)
+### [View Demo](https://movie-app-tmd.netlify.com/)
