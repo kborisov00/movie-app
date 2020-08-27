@@ -18,6 +18,7 @@ const NavigationBar = (props) => {
 
         history.push(`/search/${query}`);
         e.target.reset();
+        setIsActive(!isActive);
     }
 
     const toggleClass = () => {
@@ -35,13 +36,11 @@ const NavigationBar = (props) => {
                     <li className="navbar__item">
                         <Link className="navbar__link" to="/">HOME</Link>
                     </li>
+                </ul>
 
+                <ul className="navbar__nav">
                     <li className="navbar__item">
-                        <Link className="navbar__link" to="/about">CATALOG</Link>
-                    </li>
-
-                    <li className="navbar__item">
-                        <Link className="navbar__link" to="/contact">HELP</Link>
+                        <Link className="navbar__link" to="/about">ABOUT</Link>
                     </li>
                 </ul>
 
@@ -63,15 +62,11 @@ const NavigationBar = (props) => {
 
                 <ul className="navbar__nav">
                     <li className="navbar__item">
-                        <Link className="navbar__link" to="/">HOME</Link>
+                        <Link className="navbar__link" to="/" onClick={toggleClass}>HOME</Link>
                     </li>
 
                     <li className="navbar__item">
-                        <Link className="navbar__link" to="/about">CATALOG</Link>
-                    </li>
-
-                    <li className="navbar__item">
-                        <Link className="navbar__link" to="/contact">HELP</Link>
+                        <Link className="navbar__link" to="/about" onClick={toggleClass}>ABOUT</Link>
                     </li>
                 </ul>
             </div>

@@ -22,8 +22,10 @@ const SearchResults = (props) => {
             .catch(err => {
                 setError(err);
                 setLoaded(true);
-            })
-    })
+            });
+        
+        window.scrollTo(0, 0);
+    }, [page, query]);
 
     const changePage = (direction, currentPage, pageNum) => {
         if (direction === 'f') {
@@ -44,7 +46,7 @@ const SearchResults = (props) => {
     } else {
         return (
             <div style={{ overflow: 'hidden' }} key={query}>
-                <h3 style={{marginLeft: '50px'}}>Search results for "{query}"</h3>
+                <h3 style={{ marginLeft: '50px' }}>Search results for "{query}"</h3>
                 <div className="movie-grid">
                     {results.map(movie => (
                         <MovieCard key={movie.id} movie_data={movie} />

@@ -12,7 +12,7 @@ const MovieSlider = (props) => {
             .then(data => {
                 setResults(data.results);
             })
-    }, []);
+    }, [props.api]);
 
     const sliderSettings = {
         slidesToShow: 5,

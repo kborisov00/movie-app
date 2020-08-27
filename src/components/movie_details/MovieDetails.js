@@ -22,7 +22,7 @@ const MovieDetails = (props) => {
             .then(data => {
                 setCast(data.cast);
             });
-    }, []);
+    }, [movie_id]);
 
     const sliderOptions = {
         slidesToShow: 5,
